@@ -1,5 +1,5 @@
 
-### UI for Apache Kafka의 Offline 환경 구성을 위한 가이드 (Mac OS M1 기준)
+## UI for Apache Kafka의 Offline 환경 구성을 위한 가이드 (Mac OS M1 기준)
 
 #### 1. Source build
 
