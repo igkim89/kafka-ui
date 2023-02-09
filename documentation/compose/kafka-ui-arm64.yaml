@@ -5,7 +5,8 @@ version: '2'
 services:
   kafka-ui:
     container_name: kafka-ui
-    image: provectuslabs/kafka-ui:latest
+#    image: provectuslabs/kafka-ui:latest
+    image: kafka-ui:0.5.0.amd64
     ports:
       - 8080:8080
     depends_on:
