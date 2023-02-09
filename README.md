@@ -1,12 +1,59 @@
 
-### UI for Apache Kafka의 Offline 환경 구성을 위한 가이드 (Mac OS M1 기)
+### UI for Apache Kafka의 Offline 환경 구성을 위한 가이드 (Mac OS M1 기준)
 
-#### 1. 소스 빌드
+#### 1. Source build
 
 ```sh
-./mvnw clean install -Dmaven.test.skip=true -Pprod
+# ./mvnw clean install -Dmaven.test.skip=true -Pprod
 ```
 
+#### 2. Docker image build
+
+```sh
+# cd kafka-ui-api
+# docker build -t kafka-ui:0.5.1.amd64 --platform linux/amd64 --build-arg JAR_FILE=kafka-ui-api-0.0.1-SNAPSHOT.jar .
+```
+
+#### 3. Docker image save
+
+```sh
+# docker save kafka-ui:0.5.1.amd64 -o kafka-ui-0.5.1.amd64.image
+```
+
+#### 4. Docker image load (설치할 대상 서버)
+
+```shell script
+# docker load -i kafka-ui-0.5.1.amd64.image
+```
+
+#### 5. Docker compose file 작성
+
+```shell script
+# vim docker-compose.yml
+```
+
+```sh
+version: '2'
+services:
+  kafka-ui:
+    image: kafka-ui:0.5.1.amd64
+    container_name: kafka-ui
+    network_mode: host
+    ports:
+      - "9000:9000"
+    restart: always
+    environment:
+      - SERVER_PORT=9000
+      - KAFKA_CLUSTERS_0_NAME=DEV_Kafka_Cluster
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka01:9092,kafka02:9092,kafka03:9093
+      - KAFKA_CLUSTERS_0_METRICS_PORT=9999
+```
+
+#### 6. Service 실행
+
+```shell script
+# docker compose up -d
+```
 
 ---
 
