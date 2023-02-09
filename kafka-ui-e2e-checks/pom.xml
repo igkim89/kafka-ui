@@ -17,7 +17,7 @@
         <testcontainers.version>1.17.6</testcontainers.version>
         <junit.platform.version>1.9.2</junit.platform.version>
         <selenide.version>6.6.3</selenide.version>
-        <testng.version>7.6.1</testng.version>
+        <testng.version>7.7.1</testng.version>
         <allure.version>2.20.1</allure.version>
         <aspectj.version>1.9.9.1</aspectj.version>
         <assertj.version>3.23.1</assertj.version>
