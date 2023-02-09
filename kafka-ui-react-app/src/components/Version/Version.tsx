@@ -32,6 +32,7 @@ const Version: React.FC = () => {
 
   return (
     <S.Wrapper>
+      {/*
       <S.CurrentVersion>{currentVersion}</S.CurrentVersion>
 
       {!!outdated && (
@@ -55,6 +56,7 @@ const Version: React.FC = () => {
           <S.SymbolWrapper>&#41;</S.SymbolWrapper>
         </>
       )}
+      */}
     </S.Wrapper>
   );
 };
