@@ -30,7 +30,7 @@ const NavBar: React.FC<Props> = ({ onBurgerClick }) => {
 
           <S.Hyperlink to="/">
             <Logo />
-            UI for Apache Kafka
+            UI for Bigdata Queue Cluster
           </S.Hyperlink>
 
           <S.NavbarItem>
