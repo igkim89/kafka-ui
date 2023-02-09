@@ -39,6 +39,7 @@ const NavBar: React.FC<Props> = ({ onBurgerClick }) => {
         </S.NavbarBrand>
       </S.NavbarBrand>
       <S.NavbarSocial>
+        {/*
         <S.SocialLink
           href="https://github.com/provectus/kafka-ui"
           target="_blank"
@@ -52,6 +53,7 @@ const NavBar: React.FC<Props> = ({ onBurgerClick }) => {
           <DiscordIcon />
         </S.SocialLink>
         <UserInfo />
+        */}
       </S.NavbarSocial>
     </S.Navbar>
   );

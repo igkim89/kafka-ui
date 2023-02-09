@@ -1,6 +1,11 @@
 
-### UI for Apache Kafka의 Offline 환경 구성을 위한 가이드
+### UI for Apache Kafka의 Offline 환경 구성을 위한 가이드 (Mac OS M1 기)
 
+#### 1. 소스 빌드
+
+```sh
+./mvnw clean install -Dmaven.test.skip=true -Pprod
+```
 
 
 ---
