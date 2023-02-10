@@ -22,13 +22,13 @@
 
 #### 4. Docker image load (설치할 대상 서버)
 
-```shell script
+```sh
 # docker load -i kafka-ui-0.5.1.amd64.image
 ```
 
 #### 5. Docker compose file 작성
 
-```shell script
+```sh
 # vim docker-compose.yml
 ```
 
@@ -51,7 +51,7 @@ services:
 
 #### 6. Service 실행
 
-```shell script
+```sh
 # docker compose up -d
 ```
 
